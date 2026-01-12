@@ -19,7 +19,7 @@ upper = target * (1 + error)
 output_precision = 4
 
 exponents = list(range(-exponent_limit, exponent_limit + 1))
-exponent_combos = list(itertools.product(exponents, repeat=len(primes)))
+exponent_combos = itertools.product(exponents, repeat=len(primes))
 
 def get_fraction(primes, exp):
     num_str = ''
@@ -61,3 +61,4 @@ for exp in exponent_combos:
                 
         
         
+
